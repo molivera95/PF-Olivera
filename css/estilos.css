@@ -48,35 +48,43 @@ header {
     cursor: pointer;
 }
 
+/* Estilos para el menú en dispositivos móviles */
 .mobile-menu {
-    display: none; /* Oculta la lista de menú móvil por defecto */
+    display: none;
     position: absolute;
-    top: 60px; /* Ajusta la posición del menú desplegable */
+    top: 60px;
     right: 0;
-    background-color: #fff; /* Fondo blanco */
+    background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px;
     z-index: 2;
-    list-style: none; /* Quita los marcadores de lista */
-    font-size: 24px; /* Ajusta el tamaño de fuente para que sean grandes */
-    color: #03b64e8a; /* Texto verde */
-    width: 200px; /* Ajusta el ancho del menú desplegable */
+    list-style: none;
+    font-size: 24px;
+    color: #03b64e8a;
+    min-width: 200px;
+    text-align: center;
 }
 
 .mobile-menu.show {
-    display: block; /* Muestra el menú móvil al hacer clic en el botón */
+    display: block;
 }
 
 .mobile-menu li {
-    margin: 10px 0; /* Ajusta el espaciado entre los botones del menú */
+    margin: 10px 0;
 }
 
 .mobile-menu a {
     text-decoration: none;
-    display: block; /* Coloca los botones uno encima del otro */
-    padding: 10px 0; /* Espaciado interior para los botones */
-    color: #03b64e8a; /* Hereda el color del menú */
+    display: block;
+    padding: 10px 0;
+    color: #03b64e8a;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: #03b64e8a;
+    color: #fff;
 }
 
 /* Oculta el menú en dispositivos móviles */
