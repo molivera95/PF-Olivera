@@ -147,8 +147,14 @@ main {
     padding-bottom: 60px;
 }
 
-/* Video que va en el fondo */
+/* Edición del texto de los párrafos */
+main p {
+    font-size: 24px; /* Ajusta el tamaño de fuente según tus preferencias */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 20px; /* Espaciado entre párrafos */
+}
 
+/* Video que va en el fondo */
 .videoparaelfondo {
     position: fixed;
     top: 0;
@@ -180,6 +186,7 @@ footer {
     z-index: 1;
 }
 
+/* Header verde de arriba donde se encuentra el menú */
 .historia-pag {
     background-color: #3b874c; /* Fondo verde */
     padding: 44px; 
@@ -204,7 +211,7 @@ h4 {
     color: #3b874c; /* Color verde */
     text-align: center;
     font-size: 100px;
-    margin-top: 125px; /* Aumentar el margen superior */
+    margin-top: 190px; /* Aumentar el margen superior */
 }
 
 .texto-prueba {
