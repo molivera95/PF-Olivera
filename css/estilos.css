@@ -226,3 +226,7 @@ h4 {
 .texto-prueba p {
     margin-bottom: 20px; /* Mayor separación entre párrafos */
 }
+
+.puntos-para-generar-espacio {
+color: #f9f6e8;    
+}
