@@ -1,4 +1,4 @@
-/* Código para que se despliegue el menú en el formato responsive */
+// Código para manejar el menú desplegable en el formato mobile
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -6,10 +6,28 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('show');
     });
+
+    // Agrega este código para mostrar el footer al llegar al final
+    const footer = document.querySelector('footer');
+    const main = document.querySelector('main');
+    const windowHeight = window.innerHeight;
+    
+    function toggleFooter() {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const mainHeight = main.offsetHeight;
+        
+        if (scrollTop + windowHeight >= mainHeight) {
+            document.body.classList.add('show-footer');
+        } else {
+            document.body.classList.remove('show-footer');
+        }
+    }
+    
+    toggleFooter();
+    window.addEventListener('scroll', toggleFooter);
 });
 
-
-/* Código para que aparezca el footer al llegar al final de la página */
+// Código para mostrar el footer al llegar al final de la página
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -19,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.toggle('show');
     });
 
-    // Agrega este código para mostrar el footer al llegar al final
+    // Función para mostrar el footer al llegar al final
     const footer = document.querySelector('footer');
     const main = document.querySelector('main');
     const windowHeight = window.innerHeight;

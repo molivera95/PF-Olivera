@@ -1,4 +1,4 @@
-/* fuente de letra */
+/* Fuente de letra */
 @font-face {
     font-family: 'Gilroy-ExtraBold';
     src: url('../fonts/Gilroy-ExtraBold.otf') format('opentype');
@@ -7,6 +7,7 @@
 }
 
 /* Resetear estilos por defecto de los navegadores */
+/* ------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -14,12 +15,15 @@
 }
 
 /* Estilos generales */
+/* ------------------ */
 body {
     font-family: 'Gilroy-ExtraBold', sans-serif;
     background-color: #f9f6e8; /* Fondo blanco crema */
     color: #333; /* Texto negro */
 }
 
+/* Encabezado y Menú Móvil */
+/* ----------------------- */
 header {
     padding: 10px;
     position: fixed;
@@ -37,19 +41,18 @@ header {
     height: auto; /* Esto mantendrá la relación de aspecto de la imagen */
 }
 
-/* Agrega esta regla para el botón de menú en dispositivos móviles */
 .mobile-menu-button {
-    display: none; /* Oculta el botón en dispositivos normales */
+    display: none;
     position: absolute;
     top: 21px;
-    right: 23px; /* Alinea el botón a la derecha */
+    right: 23px;
     width: 60px;
     height: auto;
     cursor: pointer;
 }
 
-/* Estilos para el menú en dispositivos móviles */
 .mobile-menu {
+    /* Menú desplegable para dispositivos móviles */
     display: none;
     position: absolute;
     top: 60px;
@@ -87,23 +90,22 @@ header {
     color: #fff;
 }
 
-/* Oculta el menú en dispositivos móviles */
 @media (max-width: 768px) {
+    /* Estilos para la transición al menú desplegable */
     .menu {
         display: none;
     }
-    
+
     .mobile-menu-button {
-        display: block; /* Muestra el botón en dispositivos móviles */
+        display: block;
     }
-    
-    /* Estilos para el menú desplegable */
+
     .menu.show {
         display: block;
         position: absolute;
-        top: 60px; /* Ajusta la posición del menú desplegable */
+        top: 60px;
         right: 0;
-        background-color: #fff; /* Fondo blanco */
+        background-color: #fff;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         padding: 10px;
@@ -127,34 +129,36 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff; /* Texto blanco */
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     padding: 5px 10px;
 }
 
 nav ul li a:hover {
-    background-color: #fff; /* Fondo blanco */
-    color: #03b64e8a; /* Texto verde */
+    background-color: #fff;
+    color: #03b64e8a;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
+/* Contenido Principal */
+/* ------------------- */
 main {
-    margin-top: 0px; /* Para dar espacio debajo del menú fijo */
+    margin-top: 0px;
     padding: 0px;
     min-height: 100vh;
     padding-bottom: 60px;
 }
 
-/* Edición del texto de los párrafos */
 main p {
-    font-size: 24px; /* Ajusta el tamaño de fuente según tus preferencias */
-    line-height: 1.6; /* Espaciado entre líneas */
-    margin-bottom: 20px; /* Espaciado entre párrafos */
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-/* Video que va en el fondo */
+/* Video de Fondo */
+/* --------------- */
 .videoparaelfondo {
     position: fixed;
     top: 0;
@@ -171,8 +175,8 @@ main p {
     z-index: -1;
 }
 
-/* Agrega aquí más estilos para el contenido y el pie de página */
-
+/* Pie de Página */
+/* -------------- */
 footer {
     position: sticky;
     display: none;
@@ -186,10 +190,11 @@ footer {
     z-index: 1;
 }
 
-/* Header verde de arriba donde se encuentra el menú */
+/* Estilos de Página de Historia */
+/* ---------------------------- */
 .historia-pag {
-    background-color: #3b874c; /* Fondo verde */
-    padding: 44px; 
+    background-color: #3b874c;
+    padding: 44px;
     position: fixed;
     top: 0;
     left: 0;
@@ -206,27 +211,26 @@ h4 {
     color: #fff
 }
 
-/* Los dos siguientes son estilos de la página historia */
 .titulo-verde {
-    color: #3b874c; /* Color verde */
+    color: #3b874c;
     text-align: center;
     font-size: 100px;
-    margin-top: 190px; /* Aumentar el margen superior */
+    margin-top: 190px;
 }
 
 .texto-prueba {
-    color: #3b3b3b; /* Texto negro */
+    color: #3b3b3b;
     text-align: justify;
     padding: 20px;
     line-height: 1.6;
-    margin: 50px auto; /* Centrar el texto y agregar margen vertical */
-    max-width: 1300px; /* Limitar el ancho del texto */
+    margin: 50px auto;
+    max-width: 1300px;
 }
 
 .texto-prueba p {
-    margin-bottom: 20px; /* Mayor separación entre párrafos */
+    margin-bottom: 20px;
 }
 
 .puntos-para-generar-espacio {
-color: #f9f6e8;    
+    color: #f9f6e8;
 }
