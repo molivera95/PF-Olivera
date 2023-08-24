@@ -143,7 +143,8 @@ nav ul li a:hover {
 main {
     margin-top: 0px; /* Para dar espacio debajo del menú fijo */
     padding: 0px;
-    height: 89.4vh;
+    min-height: 100vh;
+    padding-bottom: 60px;
 }
 
 /* Video que va en el fondo */
@@ -166,8 +167,9 @@ main {
 
 /* Agrega aquí más estilos para el contenido y el pie de página */
 
-/* footer {
-    position: fixed;
+footer {
+    position: sticky;
+    display: none;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -177,9 +179,43 @@ main {
     color: #fff;
     z-index: 1;
 }
-*/ 
+
+.historia-pag {
+    background-color: #3b874c; /* Fondo verde */
+    padding: 44px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+body.show-footer footer {
+    display: block;
+}
 
 h4 {
     padding: 40px;
     color: #fff
+}
+
+/* Los dos siguientes son estilos de la página historia */
+.titulo-verde {
+    color: #3b874c; /* Color verde */
+    text-align: center;
+    font-size: 100px;
+    margin-top: 125px; /* Aumentar el margen superior */
+}
+
+.texto-prueba {
+    color: #3b3b3b; /* Texto negro */
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 50px auto; /* Centrar el texto y agregar margen vertical */
+    max-width: 1300px; /* Limitar el ancho del texto */
+}
+
+.texto-prueba p {
+    margin-bottom: 20px; /* Mayor separación entre párrafos */
 }
