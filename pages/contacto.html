@@ -5,33 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/favicon.ico" type="image/png">
     <title>Contacto - Racing Club de Montevideo</title>
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="normalize" href="../css/normalize.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #008000;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .menu {
+            background-color: #008000;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .menu ul li:last-child {
+            margin-right: 0;
+        }
+
+        h1 {
+            color: #008000;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .contacto-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button {
+            background-color: #008000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 <body>
     <header>
         <a href="../index.html"><img src="../img/logo.png" alt="Logo Racing Club de Montevideo" class="logo"></a>
-        <h1>Racing Club de Montevideo</h1>
-        <nav>
+        <nav class="menu">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="equipo.html">Equipo</a></li>
-                <li><a href="directiva.html">Directiva</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="./historia.html">Historia</a></li>
+                <li><a href="./equipo.html">Equipo</a></li>
+                <li><a href="./directiva.html">Directiva</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="videoparaelfondo">
-            <video autoplay muted loop id="videodefondo">
-                <source src="../video/rcmvideo.mp4" type="video/mp4">
-                El video no se puede reproducir en tu navegador :(
-            </video>
-        </div>
-    </main>
-    <footer>
-        <h4>Racing Club de Montevideo | Manuel Olivera Díaz - Todos los derechos reservados.</h4>
-    </footer>
+    <div class="contacto-container">
+        <h1>CONTACTO</h1>
+        <form id="contacto-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required></textarea>
+            <button id="enviar-button" disabled>Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        // Habilitar el botón de enviar cuando se completan todos los campos
+        const formulario = document.getElementById('contacto-form');
+        const nombreInput = document.getElementById('nombre');
+        const apellidoInput = document.getElementById('apellido');
+        const emailInput = document.getElementById('email');
+        const mensajeInput = document.getElementById('mensaje');
+        const enviarButton = document.getElementById('enviar-button');
+
+        formulario.addEventListener('input', () => {
+            const camposCompletos = nombreInput.value.trim() !== '' &&
+                apellidoInput.value.trim() !== '' &&
+                emailInput.value.trim() !== '' &&
+                mensajeInput.value.trim() !== '';
+
+            enviarButton.disabled = !camposCompletos;
+        });
+    </script>
 </body>
 </html>

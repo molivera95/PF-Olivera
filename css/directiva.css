@@ -1,0 +1,50 @@
+/* Estilos para el encabezado verde */
+.header-verde {
+    background-color: #3b874c; /* Color de fondo verde */
+    padding: 10px; /* Espacio interno del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilos para el contenido principal */
+.contenido-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    min-height: 100vh;
+    margin-top: 20px;
+    margin-left: 10px; /* Añade margen izquierdo */
+    margin-right: 10px; /* Añade margen derecho */
+}
+
+/* Estilos para las tarjetas de directivos */
+.tarjeta-directivo {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+.tarjeta-directivo h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tarjeta-directivo p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilos para el pie de página verde */
+.footer-verde {
+    background-color: #3b874c; /* Color de fondo verde */
+    padding: 10px; /* Espacio interno del pie de página */
+    color: #fff; /* Color del texto en el pie de página */
+    text-align: center; /* Alinea el texto al centro */
+}
