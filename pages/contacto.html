@@ -8,38 +8,6 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #008000;
-            color: white;
-            padding: 10px 0;
-        }
-
-        .menu {
-            background-color: #008000;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .menu ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .menu ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        .menu ul li:last-child {
-            margin-right: 0;
-        }
 
         h1 {
             color: #008000;
@@ -96,15 +64,23 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="header-verde">
         <a href="../index.html"><img src="../img/logo.png" alt="Logo Racing Club de Montevideo" class="logo"></a>
-        <nav class="menu">
-            <ul>
+        <nav>
+            <ul class="menu">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./historia.html">Historia</a></li>
                 <li><a href="./equipo.html">Equipo</a></li>
                 <li><a href="./directiva.html">Directiva</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <img id="mobile-menu-button" src="../img/menu.png" alt="Menú" class="mobile-menu-button">
+            <ul class="menu mobile-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="directiva.html">Directiva</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -122,6 +98,10 @@
             <button id="enviar-button" disabled>Enviar</button>
         </form>
     </div>
+
+<footer>
+    <h4>Racing Club de Montevideo | Manuel Olivera Díaz - Todos los derechos reservados.</h4>
+</footer>
 
     <script>
         // Habilitar el botón de enviar cuando se completan todos los campos
@@ -141,5 +121,7 @@
             enviarButton.disabled = !camposCompletos;
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../js/javascript.js"></script>
 </body>
 </html>

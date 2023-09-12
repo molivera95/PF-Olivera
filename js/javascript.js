@@ -6,23 +6,4 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('show');
     });
-
-    // Función para mostrar el footer al llegar al final
-    const footer = document.querySelector('footer');
-    const main = document.querySelector('main');
-    const windowHeight = window.innerHeight;
-
-    function toggleFooter() {
-        const scrollTop = window.scrollY || window.pageYOffset;
-        const mainHeight = main.offsetHeight;
-        
-        if (scrollTop + windowHeight >= mainHeight) {
-            document.body.classList.add('show-footer');
-        } else {
-            document.body.classList.remove('show-footer');
-        }
-    }
-
-    toggleFooter();
-    window.addEventListener('scroll', toggleFooter);
 });
